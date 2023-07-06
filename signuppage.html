@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignUP</title>
+    <link rel="stylesheet" href="signupstyle.css ">
+    <script>
+        function validation(){
+            var email = document.getElementById("email").value;
+            var pass = document.getElementById("pass").value;
+            var Cpass = document.getElementById("Cpass").value;
+            if(email==" " && pass==" " && Cpass==" "){
+                alert("enter all details");
+            }
+            else if(pass != Cpass){
+                alert("password and confirm password are not matching");
+            }
+            else{
+                alert("Success")
+            }
+            }
+            
+    </script>
+</head>
+<body>
+    <form name = "myForm" method="post">
+        <div class="sign-up-form">
+            <h1>sign up</h1>
+            <input type="email" id="email" class="input-box" name="email" placeholder="Email" required>
+            <input type="password" id="pass" class="input-box" placeholder="Password" required>
+            <input type="password" id="Cpass" class="input-box" placeholder="Confirm password" required>
+            <button type="submit" class="sign-btn" value="submit" onclick="validation()">signup</button>
+            <hr>
+            <p class = "or">OR</p>
+            <button type="button" class="google-btn">login with Google</button>
+            <p>Do you have an account ? <a href = "F:/FULL STACK/PROJECT FILES/code/loginpage.html">signin</a></p>
+        </div>
+    </form>
+</body>
+</html>
